@@ -1,0 +1,1300 @@
+[
+  {
+    "id": 1,
+    "name": "输入参数",
+    "isdisplay": 1,
+    "group": [
+      {
+        "name": "温度输入",
+        "items": [
+          {
+            "name": "温度输入信号",
+            "range": "无温度、固定温度、公式计算、Pt100、Cu100、Cu50、K偶、T偶、E偶、S偶、4-20mA、0-10mA、0-20mA",
+            "input": "下拉框",
+            "address_hex": "4F",
+            "address": 40080,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "温度小数点",
+            "range": "00000.、0000.0、000.00、00.000、0.0000",
+            "input": "下拉框",
+            "address_hex": "0B",
+            "address": 40012,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "温度上限",
+            "range": "-32768~32767 ℃",
+            "input": "输入框",
+            "address_hex": "0C",
+            "address": 40013,
+            "length": 1,
+            "value": "9",
+            "isdisplay": 1
+          },
+          {
+            "name": "温度下限",
+            "range": "-32768~32767 ℃",
+            "input": "输入框",
+            "address_hex": "0D",
+            "address": 40014,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "温度零点修正",
+            "range": "-32768~32767℃",
+            "input": "输入框",
+            "address_hex": "0E",
+            "address": 40015,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "温度满度修正",
+            "range": "0.5~1.5",
+            "input": "输入框",
+            "address_hex": "0F",
+            "address": 40016,
+            "length": 2,
+            "value": "0.5",
+            "isdisplay": 1
+          },
+          {
+            "name": "温度数字滤波",
+            "range": "1~20",
+            "input": "输入框",
+            "address_hex": "12",
+            "address": 40019,
+            "length": 1,
+            "value": "1",
+            "isdisplay": 1
+          },
+          {
+            "name": "固定温度值",
+            "range": "-32768~32767 ℃",
+            "input": "输入框",
+            "address_hex": "11",
+            "address": 40018,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      },
+      {
+        "name": "压力输入",
+        "items": [
+          {
+            "name": "压力输入信号",
+            "range": "无压力、固定压力、公式计算、4-20mA、0-10mA、0-20mA、1-5V、0-5V、mV",
+            "input": "下拉框",
+            "address_hex": "50",
+            "address": 40081,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "压力小数点",
+            "range": "00000.、0000.0、000.00、00.000、0.0000",
+            "input": "下拉框",
+            "address_hex": "14",
+            "address": 40021,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "压力上限",
+            "range": "-32768~32767 MPa",
+            "input": "输入框",
+            "address_hex": "15",
+            "address": 40022,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "压力下限",
+            "range": "-32768~32767 MPa",
+            "input": "输入框",
+            "address_hex": "16",
+            "address": 40023,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "压力零点修正",
+            "range": "-32768~32767 MPa",
+            "input": "输入框",
+            "address_hex": "17",
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1,
+            "address": 40024
+          },
+          {
+            "name": "压力满度修正",
+            "range": "0~2",
+            "input": "输入框",
+            "address_hex": "18",
+            "address": 40025,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "压力数字滤波",
+            "range": "1~20",
+            "input": "输入框",
+            "address_hex": "1B",
+            "address": 40028,
+            "length": 1,
+            "value": "1",
+            "isdisplay": 1
+          },
+          {
+            "name": "压力单位",
+            "range": "MPa、kPa",
+            "input": "下拉框",
+            "address_hex": "19",
+            "address": 40026,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "固定压力值",
+            "range": "-32768~32767 MPa",
+            "input": "输入框",
+            "address_hex": "1A",
+            "address": 40027,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      },
+      {
+        "name": "流量输入",
+        "items": [
+          {
+            "name": "信号类型",
+            "range": "脉冲、mV、4-20mA、0-10mA、0-20mA、0-5V、1-5V",
+            "input": "下拉框",
+            "address_hex": "1C",
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1,
+            "address": 40029
+          },
+          {
+            "name": "输入小数点",
+            "range": "00000.、0000.0、000.00、00.000、0.0000",
+            "input": "下拉框",
+            "address_hex": "1D",
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1,
+            "address": 40030
+          },
+          {
+            "name": "输入上限",
+            "range": "-32768~32767",
+            "input": "输入框",
+            "address_hex": "1E",
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1,
+            "address": 40031
+          },
+          {
+            "name": "输入下限",
+            "range": "-32768~32767",
+            "input": "输入框",
+            "address_hex": "1F",
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1,
+            "address": 40032
+          },
+          {
+            "name": "输入零点修正",
+            "range": "-32768~32767",
+            "input": "输入框",
+            "address_hex": "20",
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1,
+            "address": 40033
+          },
+          {
+            "name": "输入满度修正",
+            "range": "0~2",
+            "input": "输入框",
+            "address_hex": "21",
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1,
+            "address": 40034
+          },
+          {
+            "name": "实测流量单位",
+            "range": "Pa、kPa、MPa、kg/h、kg/m、t/h、t/m、l/h、l/m、m3/h、m3/m、Nm3/h、Nm3/m",
+            "input": "下拉框",
+            "address_hex": "22",
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1,
+            "address": 40035
+          },
+          {
+            "name": "小信号切除",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "40",
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1,
+            "address": 40065
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "流量参数",
+    "isdisplay": 1,
+    "group": [
+      {
+        "name": "装置",
+        "items": [
+          {
+            "name": "测量装置",
+            "range": "法兰取压孔板、角接取压孔板、D和D/2取压孔板、ISA1932喷嘴、长径喷嘴、文丘里喷嘴、铸造收缩段、机械加工收缩段、粗焊铁板收缩段、V锥流量计、通用差压流量计、脉冲输出流量计、电流输出流量计、弯管流量计",
+            "input": "下拉框",
+            "address_hex": "47",
+            "address": 40072,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "流出系数",
+            "range": "0~1000",
+            "input": "输入框",
+            "address_hex": "5C",
+            "address": 40093,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "膨胀系数",
+            "range": "0~1000",
+            "input": "输入框",
+            "address_hex": "5D",
+            "address": 40094,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "管道材质",
+            "range": "A3钢，15钢、A3F，B3钢、10钢、20钢、45钢、1Cr13,2Cr13、1Cr17、12CrlMoV、10CrMo910、Cr6SiMo：X20CrMoWV121、1Cr18Ni9Ti、普通碳钢、工业用铜、红钢、黄铜、灰口铸铁",
+            "input": "下拉框",
+            "address_hex": "5E",
+            "address": 40095,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "节流材质",
+            "range": "A3钢，15钢、A3F，B3钢、10钢、20钢、45钢、1Cr13,2Cr13、1Cr17、12CrlMoV、10CrMo910、Cr6SiMo：X20CrMoWV121、1Cr18Ni9Ti、普通碳钢、工业用铜、红钢、黄铜、灰口铸铁",
+            "input": "下拉框",
+            "address_hex": "5F",
+            "address": 40096,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "管道口径",
+            "range": "0~65535 mm",
+            "input": "输入框",
+            "address_hex": "60",
+            "address": 40097,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "节流口径",
+            "range": "0~65535 mm",
+            "input": "输入框",
+            "address_hex": "61",
+            "address": 40098,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "管道膨系",
+            "range": "0~65535 mm/(mm.℃)",
+            "input": "输入框",
+            "address_hex": "62",
+            "address": 40099,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "节流膨系",
+            "range": "0~65535 mm/(mm.℃)",
+            "input": "输入框",
+            "address_hex": "63",
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1,
+            "address": 40100
+          },
+          {
+            "name": "模型",
+            "range": "设计参数、K系数",
+            "input": "下拉框",
+            "address_hex": "7F",
+            "address": 40128,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "设计工况温度",
+            "range": "-32768~32767 ℃",
+            "input": "输入框",
+            "address_hex": "45",
+            "address": 40070,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "设计工况压力",
+            "range": "-32768~32767 MPa",
+            "input": "输入框",
+            "address_hex": "46",
+            "address": 40071,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "开方功能选择",
+            "range": "关闭、开启",
+            "input": "下拉框",
+            "address_hex": "3F",
+            "address": 40064,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "K系数段数",
+            "range": "1~10",
+            "input": "输入框",
+            "address_hex": "66",
+            "address": 40103,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "段1终点",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "67",
+            "address": 40104,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "K1系数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "68",
+            "address": 40105,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "段2终点",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "69",
+            "address": 40106,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "K2系数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "6A",
+            "address": 40107,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "段3终点",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "6B",
+            "address": 40108,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "K3系数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "6C",
+            "address": 40109,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "段4终点",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "6D",
+            "address": 40110,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "K4系数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "6E",
+            "address": 40111,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "段5终点",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "6F",
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1,
+            "address": 40112
+          },
+          {
+            "name": "K5系数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "70",
+            "address": 40113,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "段6终点",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "71",
+            "address": 40114,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "K6系数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "72",
+            "address": 40115,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "段7终点",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "73",
+            "address": 40116,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "K7系数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "74",
+            "address": 40117,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "段8终点",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "75",
+            "address": 40118,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "K8系数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "76",
+            "address": 40119,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "段9终点",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "77",
+            "address": 40120,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "K9系数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "78",
+            "address": 40121,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "段10终点",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "79",
+            "address": 40122,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "K10系数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "7A",
+            "address": 40123,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      },
+      {
+        "name": "介质",
+        "items": [
+          {
+            "name": "介质与补偿",
+            "range": "无、一般液体、水温度补偿、饱和蒸汽压力、饱和蒸汽温度、过热蒸汽温压、空气温压补偿、氧气温压补偿、氮气温压补偿、氢气温压补偿、其它一般气体温压补偿",
+            "input": "下拉框",
+            "address_hex": "49",
+            "address": 40074,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "环境压强",
+            "range": "000.000~999.999 kPa",
+            "input": "输入框",
+            "address_hex": "4B",
+            "address": 40076,
+            "length": 1,
+            "value": "00",
+            "isdisplay": 1
+          },
+          {
+            "name": "标况温度",
+            "range": "0℃、20℃",
+            "input": "下拉框",
+            "address_hex": "57",
+            "address": 40088,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "流体密度",
+            "range": "0~65535  kg/ m3",
+            "input": "输入框",
+            "address_hex": "4A",
+            "address": 40075,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "等熵指数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "64",
+            "address": 40101,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "动力粘度",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "65",
+            "address": 40102,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      },
+      {
+        "name": "流量设置",
+        "items": [
+          {
+            "name": "流量小数点",
+            "range": "00000.、0000.0、000.00、00.000、0.0000",
+            "input": "下拉框",
+            "address_hex": "7B",
+            "address": 40124,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "设计流量上限",
+            "range": "-32768~32767 （瞬时流量单位）",
+            "input": "输入框",
+            "address_hex": "7C",
+            "address": 40125,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "流量零点修正",
+            "range": "-32768~32767（瞬时流量单位）",
+            "input": "输入框",
+            "address_hex": "7D",
+            "address": 40126,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "流量满度修正",
+            "range": "0.5~2.0",
+            "input": "输入框",
+            "address_hex": "7E",
+            "address": 40127,
+            "length": 2,
+            "value": "0.5",
+            "isdisplay": 1
+          },
+          {
+            "name": "瞬时流量单位",
+            "range": "kg/h、kg/m、t/h、t/m、l/h、l/m、m3/h、m3/m、Nm3/h、Nm3/m",
+            "input": "下拉框",
+            "address_hex": "48",
+            "address": 40073,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "温度门限值",
+            "range": "-32768~32767 ℃",
+            "input": "输入框",
+            "address_hex": "55",
+            "address": 40086,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "压力门限值",
+            "range": "-32768~32767 MPa",
+            "input": "输入框",
+            "address_hex": "58",
+            "address": 40089,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "流量时间滤波",
+            "range": "0~60",
+            "input": "输入框",
+            "address_hex": "24",
+            "address": 40037,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      },
+      {
+        "name": "协议计量",
+        "items": [
+          {
+            "name": "小信号门限",
+            "range": "0~65535（瞬时流量单位）",
+            "input": "输入框",
+            "address_hex": "3B",
+            "address": 40060,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "小信号协议值",
+            "range": "0~65535（瞬时流量单位）",
+            "input": "输入框",
+            "address_hex": "3C",
+            "address": 40061,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "大信号门限",
+            "range": "0~65535（瞬时流量单位）",
+            "input": "输入框",
+            "address_hex": "3D",
+            "address": 40062,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "大信号系数",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "3E",
+            "address": 40063,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "停电补足",
+            "range": "0~65535（瞬时流量单位）",
+            "input": "输入框",
+            "address_hex": "80",
+            "address": 40129,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "累积参数",
+    "isdisplay": 1,
+    "group": [
+      {
+        "name": "",
+        "items": [
+          {
+            "name": "累积值小数点",
+            "range": "00000.、0000.0、000.00、00.000、0.0000",
+            "input": "下拉框",
+            "address_hex": "35",
+            "address": 40054,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "清零初始值",
+            "range": "0~1000000000",
+            "input": "输入框",
+            "address_hex": "36",
+            "address": 40055,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "清零许可",
+            "range": "关闭、开启",
+            "input": "下拉框",
+            "address_hex": "37",
+            "address": 40056,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "通讯清零",
+            "range": "0~2222",
+            "input": "输入框",
+            "address_hex": "38",
+            "address": 40057,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "停电信息清零",
+            "range": "关闭、开启",
+            "input": "下拉框",
+            "address_hex": "39",
+            "address": 40058,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "累积查询清零",
+            "range": "关闭、开启",
+            "input": "下拉框",
+            "address_hex": "3A",
+            "address": 40059,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "通讯参数",
+    "isdisplay": 0,
+    "group": [
+      {
+        "name": "",
+        "items": [
+          {
+            "name": "通讯地址",
+            "range": "0~255",
+            "input": "输入框",
+            "address_hex": "2D",
+            "address": 40046,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "通讯波特率",
+            "range": "2400、4800、9600、19200",
+            "input": "下拉框",
+            "address_hex": "2E",
+            "address": 40047,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "通讯校验位",
+            "range": "无校验、奇校验、偶校验",
+            "input": "下拉框",
+            "address_hex": "5B",
+            "address": 40092,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "通讯控制报警",
+            "range": "仪表控制、计算机控制",
+            "input": "下拉框",
+            "address_hex": "2F",
+            "address": 40048,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "通讯控制变送",
+            "range": "仪表控制、计算机控制",
+            "input": "下拉框",
+            "address_hex": "30",
+            "address": 40049,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "通讯协议",
+            "range": "TC ASCII、Modbus-RTU",
+            "input": "下拉框",
+            "address_hex": "5A",
+            "address": 40091,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "报警参数",
+    "isdisplay": 0,
+    "group": [
+      {
+        "name": "报警点一",
+        "items": [
+          {
+            "name": "报警设定值",
+            "range": "-32768~32767",
+            "input": "输入框",
+            "address_hex": "00",
+            "address": 40001,
+            "length": 1,
+            "value": "1",
+            "isdisplay": 1
+          },
+          {
+            "name": "报警通道",
+            "range": "温度输入通道、压力输入通道、补偿前流量、补偿后流量",
+            "input": "下拉框",
+            "address_hex": "01",
+            "address": 40002,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "报警方式",
+            "range": "上限、下限、预置清零、预置不清零",
+            "input": "下拉框",
+            "address_hex": "02",
+            "address": 40003,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "报警灵敏度",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "03",
+            "address": 40004,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "报警延时",
+            "range": "0~30（秒）",
+            "input": "输入框",
+            "address_hex": "04",
+            "address": 40005,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      },
+      {
+        "name": "报警点二",
+        "items": [
+          {
+            "name": "报警设定值",
+            "range": "-32768~32767",
+            "input": "输入框",
+            "address_hex": "05",
+            "address": 40006,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "报警通道",
+            "range": "温度输入通道、压力输入通道、补偿前流量、补偿后流量",
+            "input": "下拉框",
+            "address_hex": "06",
+            "address": 40007,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "报警方式",
+            "range": "上限、下限、预置清零、预置不清零",
+            "input": "下拉框",
+            "address_hex": "07",
+            "address": 40008,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "报警灵敏度",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "08",
+            "address": 40009,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "报警延时",
+            "range": "0~30（秒）",
+            "input": "输入框",
+            "address_hex": "09",
+            "address": 40010,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "送变参数",
+    "isdisplay": 1,
+    "group": [
+      {
+        "name": "",
+        "items": [
+          {
+            "name": "输出信号类型",
+            "range": "4-20mA、0-10mA、0-20mA、1-5V、0-5V、0-10V",
+            "input": "下拉框",
+            "address_hex": "29",
+            "address": 40042,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "变送输出上限",
+            "range": "-32768~32767",
+            "input": "输入框",
+            "address_hex": "2A",
+            "address": 40043,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "变送输出下限",
+            "range": "-32768~32767",
+            "input": "输入框",
+            "address_hex": "2B",
+            "address": 40044,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "变送通道",
+            "range": "温度、压力、补偿前流量、补偿后流量",
+            "input": "下拉框",
+            "address_hex": "2C",
+            "address": 40045,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "记录参数",
+    "isdisplay": 0,
+    "group": [
+      {
+        "name": "",
+        "items": [
+          {
+            "name": "记录间隔分",
+            "range": "0~60（分）",
+            "input": "输入框",
+            "address_hex": "41",
+            "address": 40066,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "记录间隔秒",
+            "range": "0~59（秒）",
+            "input": "输入框",
+            "address_hex": "42",
+            "address": 40067,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "记录方式",
+            "range": "循环记录、记满停止",
+            "input": "下拉框",
+            "address_hex": "43",
+            "address": 40068,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "记录清零",
+            "range": "关闭、开启",
+            "input": "下拉框",
+            "address_hex": "44",
+            "address": 40069,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "显示参数",
+    "isdisplay": 0,
+    "group": [
+      {
+        "name": "",
+        "items": [
+          {
+            "name": "显示主画面",
+            "range": "全测量值画面、补偿前信息画面、瞬时流量大字体、累积流量大字体、物理量画面",
+            "input": "下拉框",
+            "address_hex": "4D",
+            "address": 40078,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "显示方式",
+            "range": "固定显示、循环显示",
+            "input": "下拉框",
+            "address_hex": "4C",
+            "address": 40077,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "循显时间间隔",
+            "range": "1~20秒",
+            "input": "输入框",
+            "address_hex": "4E",
+            "address": 40079,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "背光亮度渐变",
+            "range": "开启、关闭",
+            "input": "下拉框",
+            "address_hex": "56",
+            "address": 40087,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "液晶对比度",
+            "range": "0~15",
+            "input": "输入框",
+            "address_hex": "59",
+            "address": 40090,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "系统参数",
+    "isdisplay": 0,
+    "group": [
+      {
+        "name": "密码",
+        "items": [
+          {
+            "name": "设置参数密码",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "51",
+            "address": 40082,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "引导参数密码",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "52",
+            "address": 40083,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          },
+          {
+            "name": "备份参数密码",
+            "range": "0~65535",
+            "input": "输入框",
+            "address_hex": "53",
+            "address": 40084,
+            "length": 1,
+            "value": "0",
+            "isdisplay": 1
+          }
+        ]
+      }
+    ]
+  }
+]
