@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("totalizer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bdc816fe9ab0b6de1aa316e819f97ea5652c4c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("totalizer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("totalizer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

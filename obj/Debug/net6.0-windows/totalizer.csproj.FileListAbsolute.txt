@@ -22,3 +22,4 @@ E:\c#应用程序\totalizer\obj\Debug\net6.0-windows\refint\totalizer.dll
 E:\c#应用程序\totalizer\obj\Debug\net6.0-windows\totalizer.pdb
 E:\c#应用程序\totalizer\obj\Debug\net6.0-windows\totalizer.genruntimeconfig.cache
 E:\c#应用程序\totalizer\obj\Debug\net6.0-windows\ref\totalizer.dll
+E:\c#应用程序\totalizer\obj\Debug\net6.0-windows\totalizer.sourcelink.json

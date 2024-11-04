@@ -37,11 +37,11 @@ namespace totalizer
         private static readonly object logLock = new object(); // 锁对象，防止多线程并发写日志
         private bool isCheckingConnection = false;
         private IModbusMaster modbusMaster = null;
+        private bool isClosing = false; // 标志变量
 
         public MainWindow()
         {
             InitializeComponent();
-            Debug.WriteLine("MainWindow initialized.");
 
             toolTip = new ToolTip();
 
@@ -53,11 +53,10 @@ namespace totalizer
                 {
                     data = parser.ReadData(reader);
                 }
-                Debug.WriteLine("INI data loaded successfully."); // 作为调试信息
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error loading INI data: {ex.Message}");
+                WriteLog($"加载ini文件错误: {ex.Message}");
             }
 
             formTitle = data["Settings"]["title"];
@@ -387,6 +386,13 @@ namespace totalizer
                             VerticalAlignment = VerticalAlignment.Center
                         };
 
+                        // ToolTip
+                        var labelToolTip = new ToolTip
+                        {
+                            Content = "[" + item.Name + "]数值范围: " + item.Range
+                        };
+                        ToolTipService.SetToolTip(itemLabel, labelToolTip);
+
                         // 创建输入控件
                         FrameworkElement inputControl;
                         if (item.Input == "输入框")
@@ -400,11 +406,11 @@ namespace totalizer
                             };
 
                             // ToolTip
-                            var toolTip = new ToolTip
+                            var textBoxToolTip = new ToolTip
                             {
                                 Content = "[" + item.Name + "]数值范围: " + item.Range
                             };
-                            ToolTipService.SetToolTip(textBox, toolTip);
+                            ToolTipService.SetToolTip(textBox, textBoxToolTip);
 
                             // TextBox 事件处理
                             textBox.LostFocus += (s, e) =>
@@ -453,6 +459,13 @@ namespace totalizer
                                 comboBox.SelectedIndex = 0; // 默认选择第一个选项
                             }
 
+                            // ToolTip for ComboBox
+                            var comboBoxToolTip = new ToolTip
+                            {
+                                Content = "[" + item.Name + "]数值范围: " + item.Range
+                            };
+                            ToolTipService.SetToolTip(comboBox, comboBoxToolTip);
+
                             comboBox.SelectionChanged += (s, e) =>
                             {
                                 SendDataToSlave(ip, port, slaveId, item.Name, item.Address, item.Length, comboBox.SelectedIndex.ToString(), "", "改变下拉时提交");
@@ -473,6 +486,7 @@ namespace totalizer
                 stackPanel.Children.Add(categoryBorder);
             }
         }
+
 
         //发送数据到从机的寄存器
         private async void SendDataToSlave(string ip, string port, string slaveId, string name, int address, int length, string input, string range = "", string remark = "")
@@ -825,7 +839,7 @@ namespace totalizer
             }
         }
 
-        //释放资源
+        // 释放资源
         private void CleanUpResources()
         {
             // 写入日志，记录程序关闭
@@ -854,7 +868,7 @@ namespace totalizer
             StopAndDisposeTimer(readTimer);
         }
 
-        //释放定时器
+        // 释放定时器
         private void StopAndDisposeTimer(object timer)
         {
             if (timer is System.Timers.Timer sysTimer)
@@ -868,13 +882,26 @@ namespace totalizer
             }
         }
 
-        //关闭窗体
+        // 关闭窗体
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            CleanUpResources(); // 在窗口关闭时调用清理资源的方法
+            // 仅在未确认退出时弹出提示框
+            if (!isClosing)
+            {
+                var result = MessageBox.Show("确认要退出吗？", "退出确认", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    isClosing = true; // 设置标志变量，表示正在关闭
+                    CleanUpResources(); // 调用清理资源的方法
+                }
+                else
+                {
+                    e.Cancel = true; // 取消关闭事件
+                }
+            }
         }
 
-        //检测键盘输入,实现按ESC键退出
+        // 检测键盘输入, 实现按ESC键退出
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Escape)
@@ -882,7 +909,7 @@ namespace totalizer
                 var result = MessageBox.Show("确认要退出吗？", "退出确认", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
-                    // 调用关闭和清理资源的方法
+                    isClosing = true; // 设置标志变量，表示正在关闭
                     CleanUpResources();
                     this.Close(); // 退出程序
                 }
