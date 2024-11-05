@@ -801,10 +801,17 @@ namespace totalizer
                                                         WriteLog($"IP:{ip},读取寄存器超时");
                                                     }
                                                 }
+                                                catch (SocketException socketEx)
+                                                {
+                                                    WriteLog($"IP:{ip},读取寄存器时发生SocketException: {socketEx.Message}");
+                                                }
+                                                catch (IOException ioEx)
+                                                {
+                                                    WriteLog($"IP:{ip},读取寄存器时发生IOException: {ioEx.Message}");
+                                                }
                                                 catch (Exception ex)
                                                 {
-                                                    // 处理读取寄存器时的错误
-                                                    WriteLog($"IP:{ip},读取寄存器时发生错误: {ex.Message}");
+                                                    WriteLog($"IP:{ip},读取寄存器时发生其他错误: {ex.Message}");
                                                 }
                                             }
                                         }
@@ -824,11 +831,14 @@ namespace totalizer
                     catch (SocketException)
                     {
                         WriteLog($"IP:{ip},无法连接到从机，将在下次调用时重试...");
-                        continue; // 跳过这个从机的处理，继续下一个从机
+                    }
+                    catch (IOException ex)
+                    {
+                        WriteLog($"IP:{ip},IO异常: {ex.Message}");
                     }
                     catch (Exception ex)
                     {
-                        WriteLog($"IP:{ip},读取从机数据发生错误: {ex.Message}");
+                        WriteLog($"IP:{ip},读取从机数据发生未知错误: {ex.Message}");
                     }
                     finally
                     {
@@ -838,6 +848,7 @@ namespace totalizer
                 }
             }
         }
+
 
         // 释放资源
         private void CleanUpResources()
